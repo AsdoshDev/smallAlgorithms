@@ -7,3 +7,8 @@ function sumAll(arr) {
   }
   return total;
 }
+
+
+// sum of a range of numbers with arithmetic progression :
+
+var sum = (lastNum - firstNum + 1) * (firstNum + lastNum) / 2;
