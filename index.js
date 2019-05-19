@@ -46,6 +46,14 @@ diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
     }
 
 
+// remove arguments in second array from the first (using rest operator is the solution) 
+
+function destroyer(arr,...args) {
+ return arr.filter(item => args.includes(item));
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
 
 
 
