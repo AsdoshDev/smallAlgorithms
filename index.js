@@ -104,6 +104,25 @@ function sumFibs(num) {
 sumFibs(4);
 
 
+// rotate the array towards right by k index
+
+
+function rotate(arr, k) {
+    let length = arr.length;
+    let newArr = new Array(length);
+    for (let i = 0; i < length; i++) {
+        let index = i + k;
+        if (index > length - 1) {
+            index = index - length;
+        }
+        newArr[index] = arr[i];
+    }
+    return newArr;
+}
+
+rotate([1, 2, 3, 4, 5, 6, 7, 8, 9], 1);
+
+
 
 
 
