@@ -1,3 +1,8 @@
+//Split string into pairs and if one does not have a pair , replace with "underscore"
+function splitChar(str){  
+return (str.length % 2 ? str + '_' : str).match(/../g);
+}
+
 // Find all occurances in a string and replace with empty space. (continuous multiple occurances also to be replaced with single empty space)
 function songDecoder(song){  
 return song.split('WUB').filter(Boolean).join(' ');
