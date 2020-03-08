@@ -1,3 +1,21 @@
+// Find all occurances in a string and replace with empty space. (continuous multiple occurances also to be replaced with single empty space)
+function songDecoder(song){  
+return song.split('WUB').filter(Boolean).join(' ');
+}
+
+(or)
+
+function songDecoder(song){
+  return song.replace(/(WUB)+/g," ").trim()
+}
+
+(or)
+
+function songDecoder(song){
+  return song.replace(/(WUB){1,}/g," ").trim()
+}
+
+
 // Sum all numbers in a range 
 
 function sumAll(arr) {
