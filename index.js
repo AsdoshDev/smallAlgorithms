@@ -1,3 +1,27 @@
+// create a string in a certain format with input as an array
+function createPhoneNumber(numbers){
+  var format = "(xxx) xxx-xxxx";
+  
+  for(var i = 0; i < numbers.length; i++)
+  {
+    format = format.replace('x', numbers[i]);
+  }
+  
+  return format;
+}
+
+(or)
+
+function createPhoneNumber(numbers){
+  numbers = numbers.join('');
+  return '(' + numbers.substring(0, 3) + ') ' 
+      + numbers.substring(3, 6) 
+      + '-' 
+      + numbers.substring(6);
+}
+
+
+
 //Split string into pairs and if one does not have a pair , replace with "underscore"
 function splitChar(str){  
 return (str.length % 2 ? str + '_' : str).match(/../g);
