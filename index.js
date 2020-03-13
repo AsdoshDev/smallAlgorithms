@@ -1,3 +1,9 @@
+// find unique number in the array
+function findUniq(arr) {
+  return arr.find(n => arr.indexOf(n) === arr.lastIndexOf(n));
+}
+
+
 // filter all substring in array1 that are part of array2
 function inArray(arr1, arr2) {
   return arr1.filter(function(needle) {
