@@ -1,3 +1,10 @@
+// find the no of cakes that can be done with the recipe against the available ingredients
+function cakes(recipe, available) {
+  return Object.keys(recipe).reduce(function(val, ingredient) {
+    return Math.min(Math.floor(available[ingredient] / recipe[ingredient] || 0), val)
+  }, Infinity)  
+}
+
 // find unique number in the array
 function findUniq(arr) {
   return arr.find(n => arr.indexOf(n) === arr.lastIndexOf(n));
