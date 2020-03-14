@@ -1,3 +1,15 @@
+// find the number of trailing zeros in a factorial of a number
+function zeros (n) {
+  var zs = 0;
+  while(n>0){
+    n=Math.floor(n/5);
+    console.log("n ---> " + n);
+    zs+=n
+  }
+  return zs;
+}
+
+
 // find the no of cakes that can be done with the recipe against the available ingredients
 function cakes(recipe, available) {
   return Object.keys(recipe).reduce(function(val, ingredient) {
