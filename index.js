@@ -1,3 +1,21 @@
+//find the arr after n rotations to left
+function rotLeft(a, d) {
+    let len = 0,j=0
+    var b =[]
+    len = a.length
+    for (let i = d; i < len; i++){
+        b[j] = a[i]
+        j++
+    }
+    for (let i = 0; i < d; i++){
+        b[j] = a[i]
+        j++
+    }
+    return b;
+}
+
+
+
 // find the number of trailing zeros in a factorial of a number
 function zeros (n) {
   var zs = 0;
