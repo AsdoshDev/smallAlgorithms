@@ -3,7 +3,7 @@
 //using slice (starting index, ending index)
 function chunkArray(arr,no){
    let fullArr = [];
-    for(let i=0;i<arr.length;i+=2){
+    for(let i=0;i<arr.length;i+=no){
       fullArr.push(arr.slice(i,i+no));
     }
    return fullArr;
