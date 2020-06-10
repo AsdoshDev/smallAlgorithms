@@ -1,3 +1,27 @@
+//get array chunk
+
+//using slice (starting index, ending index)
+function chunkArray(arr,no){
+   let fullArr = [];
+    for(let i=0;i<arr.length;i+=2){
+      fullArr.push(arr.slice(i,i+no));
+    }
+   return fullArr;
+}
+
+
+//using splice (starting index, no of items from starting index)
+function chunkArray(arr,no){
+   let fullArr = [];
+   while(arr.length > 0){
+      fullArr.push(arr.splice(0,no));
+   }
+   return fullArr;
+}
+
+
+
+
 // add 2 numbers and also currying addition of 2 numbers based on the arguments passed.
 
 function addTogether(first, second) {
