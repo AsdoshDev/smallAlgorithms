@@ -1,3 +1,17 @@
+// valid Parenthesis prsent in string ()
+
+validParentheses = (str) => {
+  const regex = /\(\)/g;
+  while(str.length> 0){
+  if(!regex.exec(str))
+    return false;
+  else{
+    str = str.replace(regex,'')
+  }
+}
+return true;
+}
+
 //get array chunk
 
 //using slice (starting index, ending index)
