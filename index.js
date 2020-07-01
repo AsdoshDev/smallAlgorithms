@@ -1,3 +1,31 @@
+// find the product of prime numbers and given both.
+
+x = 8;
+y = 3;
+
+const prime = (n) => {
+    if(n === 1)
+    return false;
+    else if(n === 2)
+    return true;
+    else {
+       for(var x = 2; x < n; x++)
+    {
+      if(n % x === 0)
+      {
+        return false;
+      }
+    }
+    return true;
+    }
+}
+
+getArray = (x) => Array.from(Array(x).keys(),Number).map(n => n+1);
+
+prodOfPrime = (arr) =>  arr.reduce((a,c) => a = prime(c) ? a*c : a,1);
+
+console.log(prodOfPrime(getArray(x))/prodOfPrime(getArray(y)));
+
 // valid Parenthesis prsent in string ()
 
 validParentheses = (str) => {
