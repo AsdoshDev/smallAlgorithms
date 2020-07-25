@@ -1,3 +1,30 @@
+//find the first missing positive integer.
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+
+let firstMissingPositive = (nums) => {
+  let isOnePresent = nums.find((num) => num === 1);
+  if (!isOnePresent) return 1;
+  else {
+    nums.sort((a,b) => a-b);
+    for (let i = 0; i < nums.length; i++) {
+      let lastIndex = nums.lastIndexOf(nums[i]);
+      let noRepeat = i === lastIndex;
+      if (noRepeat && isNotConsecutive(nums,i)) {
+        return nums[i] + 1;
+      } else {
+        i = lastIndex;
+        if(isNotConsecutive(nums,i)) return nums[i] + 1;
+      }
+    }
+  }
+};
+
+let isNotConsecutive = (nums,i) => (nums[i] > 0) && (nums[i] !== nums[i + 1] - 1);
+
 // find the product of prime numbers and given both.
 
 x = 8;
