@@ -1,3 +1,25 @@
+//caesarCipher
+
+let alps = "abcdefghijklmnopqrstuvwxyz";
+let shift = 10;
+
+const caesarCipher = (str) => {
+  let text = "";
+  let regex = /\w/;
+  for (let i = 0; i < str.length; i++) {
+  if (regex.test(str[i])) {
+      let index = alps.indexOf(str[i].toLowerCase());
+      let tIndex = index - shift;
+      text += tIndex >= 0 ? alps[tIndex] : alps[tIndex + 26];
+    } else {
+      text += str[i];
+    }
+  }
+  return text.toUpperCase();
+};
+
+caesarCipher("HELLO WORLD");
+
 // ACTUAL ANSWER FOR MISSING POSITIVE NUMBER
 var firstMissingPositive = function(nums) {
     let i = 0;
